@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <!-- <img src="bg-desktop-dark.jpg" style="width: 100%" height="100%" /> -->
+    <div class="conatiner">
+      <div class="logo_theme">
+        <div class="todo_logo_text">TODO</div>
+        <div class="theme_icon" id="theme_icon" role="button">
+          <img src="icon-sun.svg" id="image_sun_html" />
+        </div>
+        <!-- add light theme icon as html in js -->
+      </div>
+      <div class="create_list_flex">
+        <div class="create_box_container">
+          <div id="check" role="button">
+            <img
+              src="icon-check.svg"
+              style="scale: 150%; display: none"
+              id="checked_icon"
+            />
+          </div>
+          <input
+            type="text"
+            placeholder="Create a new todo...."
+            class="placeholder"
+            id="placeholder"
+          />
+        </div>
+      </div>
+      <div class="list_flex">
+        <ul id="task_list" class="task_list"></ul>
+        <div class="bottom_flex" id="bottom_flex">
+          <div class="remain_items" id="remain_items">0 item remaining</div>
+          <div class="task_groups">
+            <a class="task_group" id="all_tasks" data-type="All">All</a>
+            <a class="task_group" id="active_tasks" data-type="Active"
+              >Active</a
+            >
+            <a class="task_group" id="completed_tasks" data-type="Completed"
+              >Completed</a
+            >
+          </div>
+          <div class="clear_completed" id="clear_completed">
+            <a class="clear_completed_text">Clear Completed</a>
+          </div>
+        </div>
+      </div>
+      <div class="end_text">Drag and drop to reorder list</div>
+      <div class="test"></div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>

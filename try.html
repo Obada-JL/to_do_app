@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task Manager</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .task-form {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .task-form input[type="text"] {
+      flex: 1;
+      padding: 8px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .task-form button {
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .task-form button:hover {
+      background-color: #0056b3;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+      padding: 10px;
+      background-color: #f4f4f4;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    li:hover {
+      background-color: #e0e0e0;
+    }
+
+    .task-status {
+      display: flex;
+      align-items: center;
+    }
+
+    .task-status span {
+      margin-right: 5px;
+    }
+
+    .task-status .completed {
+      color: #28a745;
+    }
+  </style>
+</head>
+<body>
+  <h1>Task Manager</h1>
+  <div class="task-form">
+    <input type="text" id="taskName" placeholder="Enter task name">
+    <input type="text" id="dueDate" placeholder="Enter due date (YYYY-MM-DD)">
+    <button onclick="addTask()">Add Task</button>
+  </div>
+  <ul id="taskList"></ul>
+    <script>
+      let tasks = [];
+
+      function addTask() {
+        const taskNameInput = document.getElementById("taskName");
+        const dueDateInput = document.getElementById("dueDate");
+
+        const taskName = taskNameInput.value;
+        const dueDate = dueDateInput.value;
+
+        if (taskName && dueDate) {
+          tasks.push({ name: taskName, dueDate: dueDate, completed: false });
+          taskNameInput.value = "";
+          dueDateInput.value = "";
+          displayTasks();
+        }
+      }
+
+      function markTaskCompleted(taskName) {
+        for (let task of tasks) {
+          if (task.name === taskName) {
+            task.completed = true;
+            break;
+          }
+        }
+        displayTasks();
+      }
+
+      function displayTasks() {
+        const taskList = document.getElementById("taskList");
+        taskList.innerHTML = "";
+
+        for (let task of tasks) {
+          const listItem = document.createElement("li");
+          listItem.textContent = `${task.completed ? "[X]" : "[ ]"} ${
+            task.name
+          } (Due: ${task.dueDate})`;
+          listItem.onclick = () => markTaskCompleted(task.name);
+          taskList.appendChild(listItem);
+        }
+      }
+
+      // Example usage:
+      addTask("Complete JavaScript exercise", "2023-07-25");
+      addTask("Prepare presentation", "2023-08-02");
+      displayTasks();
+    </script>
+  </body>
+</html>

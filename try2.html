@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Convert HTML Elements to Array</title>
+</head>
+<body>
+  <div class="element">Element 1</div>
+  <div class="element">Element 2</div>
+  <div class="element">Element 3</div>
+
+  <script>
+    const elements = document.querySelectorAll('.element');
+    const elementArray = Array.from(elements);
+
+    console.log(elementArray); // Array containing the elements
+  </script>
+</body>
+</html>

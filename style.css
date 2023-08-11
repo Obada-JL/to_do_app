@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  background-color: hsl(235, 21%, 11%);
+  z-index: -1;
+  position: relative;
+  background-image: url(bg-desktop-dark.jpg);
+  background-repeat: no-repeat;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "League Spartan", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "League Spartan", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+hr {
+  margin: 0;
+  border-color: grey;
+}
+.conatiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  position: absolute;
+  z-index: 1;
+  width: 450px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5vh;
+}
+.logo_theme {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 50px;
+}
+.todo_logo_text {
+  color: white;
+  font-size: 48px;
+  letter-spacing: 15px;
+  font-weight: bold;
+}
+.theme_icon {
+  padding-top: 16px;
+}
+.create_list_flex {
+  padding-bottom: 20px;
+  width: 100%;
+  background-color: hsl(235, 24%, 19%);
+}
+.create_list_flex_light_theme {
+  padding-bottom: 20px;
+  width: 100%;
+  background-color: hsl(0, 0%, 98%);
+}
+.create_box_container {
+  padding-top: 25px;
+  display: flex;
+  padding-left: 15px;
+}
+#check {
+  height: 25px;
+  min-width: 25px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.check {
+  height: 25px;
+  min-width: 25px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.placeholder {
+  font-size: 18px;
+  background-color: transparent;
+  border-color: transparent;
+  color: white;
+  padding-left: 15px;
+}
+.placeholder_light_theme {
+  font-size: 18px;
+  background-color: transparent;
+  border-color: transparent;
+  color: black;
+  padding-left: 15px;
+}
+.list_flex {
+  padding-bottom: 25px;
+  padding-top: 30px;
+  width: 100%;
+  padding-bottom: 25px;
+}
+.tasks {
+  width: 100%;
+  background-color: hsl(235, 24%, 19%);
+  height: 50px;
+}
+.tasks_light_theme {
+  width: 100%;
+  background-color: hsl(0, 0%, 98%);
+  height: 50px;
+}
+.bottom_flex {
+  display: flex;
+  width: 100%;
+  background-color: hsl(235, 24%, 19%);
+  padding: 15px 0px;
+  justify-content: space-around;
+}
+.bottom_flex_light_theme {
+  display: flex;
+  width: 100%;
+  background-color: hsl(0, 0%, 98%);
+  padding: 15px 0px;
+  justify-content: space-around;
+}
+.task_groups {
+  justify-content: space-between;
+  width: 30%;
+  align-items: center;
+  display: flex;
+}
+.task_group {
+  color: grey;
+  font-size: 12px;
+}
+.task_group:hover {
+  color: hsl(220, 98%, 61%);
+}
+.remain_items {
+  color: grey;
+  font-size: 12px;
+}
+.clear_completed_text {
+  color: grey;
+  font-size: 12px;
+}
+.clear_completed_text:hover {
+  color: hsl(220, 98%, 61%);
+}
+.end_text {
+  color: grey;
+  font-size: 16px;
+}
+/*js classes*/
+
+.light_todo_logo_text,
+.light_placeholder {
+  color: black;
+}
+.body_light_theme_properties {
+  background-color: hsl(0, 0%, 89%);
+  background-image: url(bg-desktop-light.jpg);
+}
+/*i will add light theme with js */
+
+.checked_box {
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  border: 1px;
+}
+.checked_text {
+  color: grey;
+  text-decoration: line-through;
+}
+.check:hover {
+  border-color: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.task_container {
+  display: flex;
+  align-items: center;
+  /* gap: 15px; */
+  border-bottom: 1px solid grey;
+  padding: 15px 0px;
+}
+.task_list {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  width: 100%;
+}
+.task {
+  display: flex;
+  align-items: center;
+  color: white;
+  width: 100%;
+  padding-left: 15px;
+  font-size: 20px;
+}
+.task_light_theme {
+  color: black;
+}
+.item_check {
+  margin-left: 7px;
+}
+.extra_container {
+  display: flex;
+  gap: 15px;
+  padding: 7px 0px;
+}
+.x_icon {
+  padding-right: 15px;
+  scale: 150%;
+  align-items: center;
+  display: flex;
+  color: hsl(235, 24%, 19%);
+  cursor: pointer;
+}
+.x_icon_light_theme {
+  color: hsl(0, 0%, 98%);
+}
+.task_container:hover {
+  .x_icon {
+    color: white;
+  }
+}
+.tasks_light_theme:hover {
+  .x_icon {
+    color: black;
+  }
+}
+.task_group:hover,
+.clear_completed:hover,
+#image_sun_html:hover,
+#image_moon_html:hover {
+  cursor: pointer;
+}
